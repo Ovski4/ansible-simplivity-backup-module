@@ -16,7 +16,7 @@ Usage in tasks
   simplivity_backup:
     backup_name: "Created by Ansible the {{ lookup('pipe','date +%Y-%m-%d') }}"
     omnistack_host: "omnistack_host@your_domain.net"
-    virtual_machine_name: "you_vm_name"
+    virtual_machine_name: "your_vm_name"
     username: "your_username"
     password: "your_password"
     app_consistent: "true"
@@ -30,7 +30,7 @@ Usage in tasks
   simplivity_backup:
     backup_name: "Created by Ansible the {{ lookup('pipe','date +%Y-%m-%d') }}"
     omnistack_host: "omnistack_host@your_domain.net"
-    virtual_machine_name: "you_vm_name"
+    virtual_machine_name: "your_vm_name"
     username: "your_username"
     password: "your_password"
     state: "absent"
