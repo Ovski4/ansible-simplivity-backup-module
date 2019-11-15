@@ -1,7 +1,7 @@
 Ansible simplivity backup module
 ================================
 
-This module can be used to create or delete virtual machine backups using the [HPE SimpliVity OmniStack REST API](https://developer.hpe.com/api/simplivity/).
+This module can be used to **create**, **delete** or **restore** virtual machine backups using the [HPE SimpliVity OmniStack REST API](https://developer.hpe.com/api/simplivity/).
 
 Setup
 -----
@@ -34,5 +34,17 @@ Usage in tasks
     username: "your_username"
     password: "your_password"
     state: "absent"
+  delegate_to: localhost
+```
+
+```yml
+- name: Restore a simplivity backup
+  simplivity_backup:
+    backup_name: "Created by Ansible before perilous operation"
+    omnistack_host: "omnistack_host@your_domain.net"
+    virtual_machine_name: "your_vm_name"
+    username: "your_username"
+    password: "your_password"
+    state: "restored"
   delegate_to: localhost
 ```
